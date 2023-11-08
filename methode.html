@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LES METHODES POUR LES ARRAYS</title>
+</head>
+<body>
+    <script>
+        const fruits = ['banana' , 'pomme' , 'mange' , 'orange' , 'apple']
+        console.log("la methode length: " + fruits.length)
+        console.log("la methode toString: " + fruits.toString())
+        console.log("la methode join: " + fruits.join('*'))
+        // la methode pop
+        let supprime = fruits.pop()
+        console.log(fruits)
+        // la methode push
+        let ajout = fruits.push('fraise')
+        console.log('la methode push() ' + fruits)
+        
+        // la methode shift()
+        let supprime1 = fruits.shift()
+        console.log('la methode shift() ' +fruits)
+
+        // la methode unshift()
+        let ajout1 = fruits.unshift('pasteque')
+        console.log('la methode unshift() ' +fruits)
+
+        // la methde flat()
+        const tab = [[1,2] , [3,4] , [5,6]]
+        const newtab = tab.flat() 
+        console.log("metode flat() " + newtab)
+
+        
+        // console.log(fruits)
+        fruits.reverse()
+        console.log("reverse " + fruits)
+
+        const tab22 = [1 , 12 ,34 , 56 , 100 ,23 , 56]
+        function myArrayMax(arr) {
+            return Math.max.apply(null, arr);
+        }
+        console.log('la plus grand valeur est ' + myArrayMax(tab22) )
+
+        const tab3 = [
+            {nom:'mbaye' , age:29},
+            {nom:'ka' , age:19},
+            {nom:'dia' , age:55},
+            {nom:'loum' , age:78}
+        ]
+        tab3.sort(function(a, b){
+            return a.age - b.age
+            console.log(a.age - b.age)
+        });
+
+        
+        var tab1 = [2 ,8 ,5 ,3 ,9]
+
+// la methode forEach
+console.log('la metode forEach')
+tab1.forEach((element) =>
+    console.log(element)
+)
+
+console.log('')
+
+// la methode map()
+function myFunction1(x){
+    return(x*2)
+}
+const tab2 = tab1.map(myFunction1);
+console.log('la methode map() ' + tab2)
+
+// la methode filter 
+function myFunction2(value){
+    return value > 4
+}
+var tabfilter = tab1.filter(myFunction2)
+console.log('la methode filter ' + tabfilter)
+
+// la methode reduce()
+function best(total , value){
+    return total + value
+}
+let best2 = tab1.reduce(best)
+console.log('la methode reduce ' + best2)
+
+// la methode indexof
+var ind = tab1.indexOf(8)
+console.log('l indexe de 8 dans le tableau est ' + ind)
+
+// la methode find()
+function khady(value){
+    return value > 5
+}
+let findval = tab1.find(khady)
+console.log('la premiere valeur superieur a 5 est ' + findval)
+
+// la methode from()
+const montab = Array.from("ABCDEFG")
+console.log('la methode from() est ' + montab)
+// elle permet aussi d'afficher les valeur d'un tableau object
+
+// la methode keys()
+var tabx = 
+    {a: 'hello',
+    b:'world',
+    c:'javascript'}
+
+var tabx1 = Object.keys(tabx)
+console.log('la methode keys(): ' + tabx1)
+// en remplaçant keys() par value() on obtiendra les valeurs des objects
+ 
+// la methode inludes()
+const uncl = tab1.includes(88)
+console.log(uncl)
+    </script>
+</body>
+</html>

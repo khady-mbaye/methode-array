@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METHODE ITERARATION</title>
+</head>
+<body>
+    <p>Les méthodes d'itération de tableau fonctionnent sur chaque élément du tableau.</p>
+    <script>
+        var tab1 = [2 ,8 ,5 ,3 ,9]
+
+        // la methode forEach
+        console.log('la metode forEach')
+        tab1.forEach((element) =>
+            console.log(element)
+        )
+
+        console.log('')
+
+        // la methode map()
+        function myFunction1(x){
+            return(x*2)
+        }
+        const tab2 = tab1.map(myFunction1);
+        console.log('la methode map() ' + tab2)
+
+        // la methode filter 
+        function myFunction2(value){
+            return value > 4
+        }
+        var tabfilter = tab1.filter(myFunction2)
+        console.log('la methode filter ' + tabfilter)
+
+        // la methode reduce()
+        function best(total , value){
+            return total + value
+        }
+        let best2 = tab1.reduce(best)
+        console.log('la methode reduce ' + best2)
+
+        // la methode indexof
+        var ind = tab1.indexOf(8)
+        console.log('l indexe de 8 dans le tableau est ' + ind)
+
+        // la methode find()
+        function khady(value){
+            return value > 5
+        }
+        let findval = tab1.find(khady)
+        console.log('la premiere valeur superieur a 5 est ' + findval)
+
+        // la methode from()
+        const montab = Array.from("ABCDEFG")
+        console.log('la methode from() est ' + montab)
+        // elle permet aussi d'afficher les valeur d'un tableau object
+
+        // la methode keys()
+        var tabx = 
+            {a: 'hello',
+            b:'world',
+            c:'javascript'}
+        
+        var tabx1 = Object.keys(tabx)
+        console.log('la methode keys(): ' + tabx1)
+        // en remplaçant keys() par value() on obtiendra les valeurs des objects
+         
+        // la methode inludes()
+        const uncl = tab1.includes(88)
+        console.log(uncl)
+    </script>
+</body>
+</html>
